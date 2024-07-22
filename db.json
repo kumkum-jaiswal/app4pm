@@ -1,0 +1,39 @@
+{
+  "student": [
+    {
+      "id": "1",
+      "rollno": 45,
+      "name": "kumkum",
+      "city": "bpl",
+      "fees": 4662
+    },
+    {
+      "id": "d293",
+      "rollno": "45",
+      "name": "mona",
+      "city": "indore",
+      "fess": "4563"
+    },
+    {
+      "id": "0bff",
+      "rollno": "123",
+      "name": "Monika",
+      "city": "Jabulpur",
+      "fees": "45000"
+    },
+    {
+      "id": "c4e4",
+      "rollno": "45",
+      "name": "lucku",
+      "city": "dwlin",
+      "fees": "4563"
+    },
+    {
+      "id": "5077",
+      "rollno": "45",
+      "name": "Neha",
+      "city": "Jabulpur",
+      "fees": "45623"
+    }
+  ]
+}

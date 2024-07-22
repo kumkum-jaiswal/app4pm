@@ -1,55 +1,26 @@
-const box1={
-  width:"500px",
-  height:"400px",
-  border:"4px solid red",
-  borderRadius:"30px",
-  backgroundColor:"yellow",
-  
-  
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./component/Layout";
+import Home from "./component/Home";
+import About from "./component/About";
+import Contact from "./component/Contact";
+import Display from "./component/Display";
 
-}
-const box2={
-  width:"300px",
-  height:"200px",
-  border:"4px solid blue",
-  borderRadius:"30px",
-  backgroundColor:"pink",
-  margin:"40px",
-  padding:"40px"
-
-}
-const box3={
-  width:"150px",
-  height:"70px",
-  border:"4px solid green",
-  borderRadius:"30px",
-  backgroundColor:"skyblue",
-  margin:"40px",
-  padding:"40px"
-
-}
-
-
-
-
-const App=()=>{
-  return(
+const App = () => {
+  return (
     <>
-    <div style={{textAlign:"center",padding:"10%",margin:"12%"}}>
-        <div style={box1} >
-        
-        <div style={box2} >
-        
-        <div style={box3}> 
-        <h1>cybrom</h1>
-        </div>
-        </div>
-        </div>
-        </div>
-
-
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/display" element={<Display />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
-  )
-}
-export
-default App;
+  );
+};
+
+export default App;

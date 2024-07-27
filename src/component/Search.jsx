@@ -1,21 +1,19 @@
-import { useEffect, useState } from "react";
 import axios from "axios";
+import { useState } from "react";
 import Table from 'react-bootstrap/Table';
 
+const Search = () => {
+    const[rollno,setRollno]=useState("");
+    const[mydata,setmydata]=useState([]);
 
-const Display = () => {
-    const [mydata,setMydata]=useState([])
 
-    const loadData=()=>{
-        let url="http://localhost:3000/student";
+    const Searchrec=()=>{
+let url=`http://localhost:3000/student/?rollno=${rollno}`
         axios.get(url).then((res)=>{
-            console.log(res.data);
-            setMydata(res.data)
+            setmydata(res.data);
         })
+
     }
-    useEffect(()=>{
-        loadData()
-    },[])
     const ans=mydata.map((key)=>{
         return(
             <>
@@ -30,7 +28,12 @@ const Display = () => {
     })
     return ( 
         <>
-            <h1>display page</h1>
+            <h1>search record</h1>
+            Enter rollno
+            <input type="text" value={rollno} 
+            onChange={(e)=>{setRollno(e.target.value)}} />
+            <button onClick={Searchrec}>search</button>
+            <hr/>
             <Table striped bordered hover>
       <thead>
         <tr>
@@ -46,5 +49,6 @@ const Display = () => {
       </Table>
         </>
      );
-} 
-export default Display;
+}
+ 
+export default Search;

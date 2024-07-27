@@ -2,8 +2,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./component/Layout";
 import Home from "./component/Home";
 import About from "./component/About";
-import Contact from "./component/Contact";
 import Display from "./component/Display";
+import Insert from "./component/Insert";
+import Search from "./component/Search";
+import Update from "./component/Update";
+import EditData from "./component/EditData";
 
 const App = () => {
   return (
@@ -14,8 +17,11 @@ const App = () => {
             <Route index element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/insert" element={<Insert />} />
             <Route path="/display" element={<Display />} />
+            <Route path="/search" element={<Search />} />
+            <Route path="/update" element={<Update />} />
+            <Route path="/myedit/:id" element={<EditData />} />
           </Route>
         </Routes>
       </BrowserRouter>

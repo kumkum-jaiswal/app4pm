@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import axios from 'axios';
 
-const Contact = () => {
+const Insert = () => {
 
     const [input,setinput]=useState({});
     const handleinput=(e)=>{
@@ -40,8 +40,7 @@ const Contact = () => {
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Enter city</Form.Label>
         <Form.Control type="text" placeholder="enter city"  name="city" 
-            value={input.city} onChange={handleinput}
-        />
+            value={input.city} onChange={handleinput}/>
       </Form.Group>
       
       
@@ -59,4 +58,4 @@ const Contact = () => {
      );
 }
  
-export default Contact;
+export default Insert;

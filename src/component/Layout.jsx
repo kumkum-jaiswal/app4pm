@@ -14,8 +14,10 @@ const Layout = () => {
           <Nav className="me-auto">
             <Nav.Link as= {Link} to="home">Home</Nav.Link>
             <Nav.Link as= {Link} to="about">About</Nav.Link>
-            <Nav.Link as= {Link} to="contact">Contact</Nav.Link>
+            <Nav.Link as= {Link} to="insert">Insert</Nav.Link>
             <Nav.Link as= {Link} to="display">Display</Nav.Link>
+            <Nav.Link as= {Link} to="search">Search</Nav.Link>
+            <Nav.Link as= {Link} to="update">Update</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

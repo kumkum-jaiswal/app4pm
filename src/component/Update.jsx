@@ -32,7 +32,6 @@ const Update = () => {
           myNav(`/myedit/${myid}`)
 
     }
-
     const ans=mydata.map((key)=>{
         return(
             <>
